@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_14_111528) do
+ActiveRecord::Schema.define(version: 2021_04_15_025054) do
+
+  create_table "products", force: :cascade do |t|
+    t.string "product_name"
+    t.text "product_description"
+    t.string "product_img_id"
+    t.integer "sales_price"
+    t.boolean "sales_status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
