@@ -1,6 +1,10 @@
 class Product < ApplicationRecord
+  belongs_to :user
+  attachment :product_img
+
 
   def new
+    @product = Product.new
   end
 
   def create
