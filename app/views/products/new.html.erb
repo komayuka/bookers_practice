@@ -1,13 +1,14 @@
 <h1>商品新規登録</h1>
 <%= form_with model:@product, local:true do |f| %>
 
-<h4>商品画像</h4>
- <%= f.attachment_field :product_img %>
-
+<table>
+ <tbody>
+ <h4>商品画像</h4>
+   <%= f.attachment_field :product_img %>
 
 
 <h4>商品名</h4>
- <%= f.taxt_field :product_name %>
+ <%= f.text_field :product_name %>
 
 
 
@@ -17,12 +18,14 @@
 <h4>ジャンル</h4>
 
 <h4>税抜価格</h4>
- <%= f.text_field :sales_price %>
+ <%= f.text_field :sales_price %>円
 
 
 <h4>販売ステータス</h4>
 
 
-
 <%= f.submit '新規登録' %>
 <% end %>
+
+</tbody>
+</table>
