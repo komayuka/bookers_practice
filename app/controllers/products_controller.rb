@@ -1,17 +1,6 @@
 class ProductsController < ApplicationController
   before_action :authenticate_user!
 
-   def new
-    @product = Product.new
-   end
-
-  def create
-    @product = Product.new(product_params)
-    @product.admin_id = current_admin.id
-    @product.save
-    redirect_to product_path
-  end
-
   def index
     @product = Product.all
   end
@@ -19,14 +8,6 @@ class ProductsController < ApplicationController
   def show
   end
 
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
-  end
 
   private
 
