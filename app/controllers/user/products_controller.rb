@@ -1,4 +1,4 @@
-class ProductsController < ApplicationController
+class User::ProductsController < ApplicationController
   before_action :authenticate_user!
 
   def index

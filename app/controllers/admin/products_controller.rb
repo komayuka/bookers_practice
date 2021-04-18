@@ -1,5 +1,5 @@
 class Admin::ProductsController < ApplicationController
-   before_action :if_not_admins
+   before_action :if_not_admin
 
    def new
     @product = Product.new
