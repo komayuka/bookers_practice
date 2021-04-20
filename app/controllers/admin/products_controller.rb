@@ -1,43 +1,48 @@
 class Admin::ProductsController < ApplicationController
-   before_action :if_not_admin
+   before_action :authenticate_admin!
 
-   def new
+  # 商品新規投稿
+  def new
     @product = Product.new
-   end
+  end
 
+  # 投稿一覧
+  def index
+    @product = Product.new
+    @products = Product.page(params[:page]).per(10)
+  end
+
+  # 商品詳細
+  def show
+    @product = Product.find(params[:id])
+  end
+
+  # 投稿データ保存
   def create
     @product = Product.new(product_params)
-    @product.admin_id = current_admin.id
     @product.save
-    redirect_to product_path
+      #　調べる
+     redirect_to admin_products_path
   end
 
-  def index
-    @product = Product.all
-  end
-
-  def show
-  end
-
+  # 商品編集
   def edit
+    @product = Product.find(params[:id])
   end
 
+  # 商品編集更新
   def update
+    @product = Product.find(params[:id])
+    @product.update(product_params)
+    redirect_to admin_products_path
   end
 
-  def destroy
-  end
-
+  #  ストロングパラメータ
   private
 
-  def if_not_admins
-    redirect_to  root_path unless current_user.admins?
-  end
-
-
   def product_params
-    params.require(:product).permit(:product_name, :product_description, :product_img, :sales_price, :sale_status)
+    params.require(:product).permit(:product_name, :product_image, :product_description, :sales_price, :sales_status, :genre_id)
   end
+
 
 end
-
