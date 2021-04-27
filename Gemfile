@@ -71,3 +71,6 @@ gem 'pry-byebug'
 gem 'jp_prefecture'
 gem 'kaminari','~> 1.2.1'
 gem 'rails-i18n'
+
+gem 'cancancan'
+gem 'rails_admin'

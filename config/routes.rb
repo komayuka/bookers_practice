@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-
+root 'homes#top'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :admins, controllers: { sessions: 'admins/sessions', passwords: 'adimns/passwords', registrations: 'admins/registrations' }
   devise_for :users, controllers: {sessions: 'users/sessions', passwords: 'users/passwords', registrations: 'users/registrations' }
@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   end
 
   scope module: :user do
-    root 'homes#top'
+
     get 'about' => 'homes#about'
     resources :products, only: [:index, :show]
     resource :customers, only: [:show, :update]
