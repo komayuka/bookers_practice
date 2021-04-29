@@ -10,20 +10,38 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <% if user_signed_in? %>
-     <li>
-       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-     </li>
-    <% else %>
-     <li>
-       <%= link_to "新規登録",new_user_registration_path %>
-     </li>
-     <li>
-       <%= link_to "login", new_user_session_path %>
-     </li>
-    <% end %>
-
+  <body class="d-flex flex-column vh-100">
+    <header class="shadow-sm">
+      <nav class="navbar nabver-expand-lg navber-light">
+        <div class="container">
+          <a class="navber-brand p-3" href="/">top</a>
+          <button class="nav-ber-toggler" type="button" date-toggle="collapse" date-torget="#navberNavDropdown" aria-controls="navbarNavDropdow">
+           <span class="navber-toggler-icon"></span>
+          </button>
+          <div class="collapse navber-collapse" id="navberNavDropdown">
+           <ul class="navber-nav ml-auto">
+           <% if user_signed_in? %>
+           <li class="nav-item">
+             <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+           </li>
+           <li class="nav-item">
+             <%= link_to "マイページ", root_path %>
+           </li>
+           <% else %>
+           <li class="nav-item">
+            <%= link_to "新規登録",new_user_registration_path %>
+           </li>
+           <li class="nav-item">
+            <%= link_to "login", new_user_session_path %>
+           </li>
+            <% end %>
+         </ul>
+        </div>
+       </div>
+      </nav>
+     </header>
+     <main class="mb-auto">
     <%= yield %>
+    </main>
   </body>
 </html>
