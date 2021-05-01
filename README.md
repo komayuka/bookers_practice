@@ -1,14 +1,7 @@
-# README
+# book_practice
 
-# Name（リポジトリ/プロジェクト/OSSなどの名前）
-
-book_practice
-
+# サイト概要
 DMMカリキュラム、チーム開発に伴う自己学習
-
-# DEMO
-
-"book_practice"の魅力が直感的に伝えわるデモ動画や図解を載せる
 
 # Features
 
@@ -18,8 +11,8 @@ DMMカリキュラム、チーム開発に伴う自己学習
 
 "book_practice"を動かすのに必要なライブラリなどを列挙する
 
-* rails 
-* 
+* rails
+*
 
 # Installation
 
@@ -43,7 +36,7 @@ python demo.py
 
 現在まだ途中
 
-# Author
+# 作成者
 
 作成情報を列挙する
 
@@ -51,16 +44,15 @@ python demo.py
 * 所属
 * E-mail
 
-# License
-ライセンスを明示する
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
 
-"hoge" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
+## 使用素材
+- 外部サービスの画像素材・音声素材を使用した場合は、必ずサービス名とURLを明記してください。
+- 使用しない場合は、使用素材の項目をREADMEから削除してください。
 
-社内向けなら社外秘であることを明示してる
-
-"hoge" is Confidential.
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you 
+Things you
