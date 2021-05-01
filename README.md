@@ -1,5 +1,3 @@
-# README
-
 # book_practice
 
 # サイト概要
