@@ -7,42 +7,14 @@ DMMカリキュラム、チーム開発に伴う自己学習
 
 "book_practice"のセールスポイントや差別化などを説明する
 
-# Requirement
-
-"book_practice"を動かすのに必要なライブラリなどを列挙する
-
-* rails
-*
-
-# Installation
-
-Requirementで列挙したライブラリなどのインストール方法を説明する
-
-```bash
-pip install huga_package
-```
 
 # Usage
 
-DEMOの実行方法など、"book_practice"の基本的な使い方を説明する
-
-```bash
-git clone https://github.com/hoge/~
-cd examples
-python demo.py
-```
+DEMOの実行方法など、"book_practice"の基本的な使い方を説明
 
 # Note
 
 現在まだ途中
-
-# 作成者
-
-作成情報を列挙する
-
-* 作成者
-* 所属
-* E-mail
 
 ## 開発環境
 - OS：Linux(CentOS)
